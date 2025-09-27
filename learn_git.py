@@ -1,11 +1,11 @@
-name = 'HarryPotter'
-
-
 def finding_length(iterable):
     length = 0
     for i in iterable:
         length += 1
 
-    print(length)
+    print(f'The length of {iterable} is = {length}')
 
-finding_length(name)
+names_list = ['Shailaja', 'Deeksha', 'Hashmath', 'Atharva']
+
+for name in names_list:
+    finding_length(name)
