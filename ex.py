@@ -1,26 +1,64 @@
-import time
+# def outer(func):
+#     def wrapper(*args, **kwargs):
+#         print("Good morning")
+#         func(*args, **kwargs)
+#     return wrapper
+#
+#
+# @outer
+# def add(a, b):
+#     print(a + b)
+#
+# add(10, 20)
+# add(1, 2)
 
-from selenium import webdriver
 
-opts = webdriver.ChromeOptions()
-opts.add_experimental_option("detach", True)
 
-driver = webdriver.Chrome(opts)
 
-driver.get('https://demowebshop.tricentis.com/')
-time.sleep(2)
 
-driver.find_element('xpath', '//a[text()="Register"]').click()
-time.sleep(2)
-driver.find_element('xpath', '//input[@id="gender-female"]').click()
-driver.find_element('xpath', '//input[@id="FirstName"]').send_keys('Shailaja')
-driver.find_element('xpath', '//input[@id="LastName"]').send_keys('Aralikatti')
-driver.find_element('xpath', '//input[@id="Email"]').send_keys('shailaja@gmail.com')
-driver.find_element('xpath', '//input[@id="Password"]').send_keys('shailaja@12345')
-driver.find_element('xpath', '//input[@id="ConfirmPasswordddd"]').send_keys('shailaja@12345')
-time.sleep(2)
+def sample():
+    name = 'Shailaja'
+    yield name
+    yield '100'
+    yield True
+    yield 'python'
+    yield 10
 
-driver.find_element('xpath', '//a[text()="Log in"]').click()
-time.sleep(2)
-driver.find_element('xpath', '//input[@id="Email"]').send_keys('shailaja@gmail.com')
-driver.find_element('xpath', '//input[@id="Passworddd"]').send_keys('shailaja@12345')
+res = sample()
+print(res)
+
+for ele in res:
+    print(ele)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
