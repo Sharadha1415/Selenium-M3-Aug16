@@ -1,3 +1,23 @@
+'''
+Fixture     :   @pytest.fixture()  is a inbuilt decorator
+                It is a function which is used to perform setup and teardown operations
+                setup       :   The set of operations which executes before the execution of the test_function
+                teardown    :   The set of operations which executes after the execution of the test_function
+
+                SYNTAX  :   @pytest.fixture()
+                            def func():
+                                pass                ## setup
+                                yield
+                                pass                ## teardown
+
+                            def test_func(func):
+                                pass
+
+                            We should pass the name of the fixture as a parameter for the test functions
+
+'''
+
+
 # def outer(func):
 #     def wrapper(*args, **kwargs):
 #         print("Good morning")

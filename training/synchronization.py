@@ -37,6 +37,19 @@ There are 2 types of synchronization
                 Applied only to specific elements
                 Waits for multiple conditions
                 More powerful & precise
+
+        WebDriverWait   :   It allows the driver to wait for a certain condition to check before we continue the operation.
+                            Instead of waiting for a fixed amount of time, it waits until a condition is True or maximum time is reached.
+
+        expected_conditions :   The conditions to be applied on the web-elements are already pre-defined and they are defined in expected_conditions.py
+                            To make use of the pre-defined conditions we import expected_conditions
+
+        until()         :   It is a method of WebDriverWait
+                            It checks whether the given condition is satisfied or not
+                            If the condition is True, it will continue the operations.
+                            If the condition is False, it will always gives TimeOutException
+
+
 '''
 
 import time

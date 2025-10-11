@@ -270,7 +270,15 @@ skipif  :   skipif is also used to skip the execution of the testcases, but the 
 #####################################################################################################
 
 '''
-xfail   :   
+xfail   :   This is an expected failure
+
+            SYNTAX  :   @pytest.mark.xfail
+                        def test_func():
+                            pass  
+                        
+                        We are expecting the test_func to fail.
+                        If the testcase is failed, then the output will be XFAIL
+                        If the testcase is passed, then the output will be XPASS
 '''
 
 import time
@@ -338,7 +346,7 @@ import time
 #####################################################################################################
 
 '''
-parametrize     :   
+parametrize     :   To pass parameters for the testcases, we use parametrize markers  
 '''
 
 # @pytest.mark.parametrize('a, b', [(10, 20)])

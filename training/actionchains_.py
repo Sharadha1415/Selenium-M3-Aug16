@@ -132,7 +132,9 @@ Scrolling operations    :
 #####################################################################################################
 
 '''
-Drag and drop   :
+Drag and drop   :   To perform drag and drop operations in selenium, we use ActionChains
+                    drag_and_drop is the direct attribute of ActionChains class
+                    SYNTAX  :   ac_obj.drag_and_drop(source, target).perform
 '''
 #
 # driver.get('https://testautomationpractice.blogspot.com/')

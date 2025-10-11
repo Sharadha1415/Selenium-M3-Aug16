@@ -1,43 +1,24 @@
-# def outer(func):
-#     def wrapper(*args, **kwargs):
-#         print("Good morning")
-#         func(*args, **kwargs)
-#     return wrapper
-#
-#
-# @outer
-# def add(a, b):
-#     print(a + b)
-#
-# add(10, 20)
-# add(1, 2)
+import time
 
+from selenium import webdriver
 
+opts = webdriver.ChromeOptions()
+opts.add_experimental_option("detach", True)
 
+driver = webdriver.Chrome(opts)
 
+driver.get('https://www.saucedemo.com/')
+time.sleep(2)
 
-def sample():
-    name = 'Shailaja'
-    yield name
-    yield '100'
-    yield True
-    yield 'python'
-    yield 10
-
-res = sample()
-print(res)
-
-for ele in res:
-    print(ele)
-
-
-
-
-
-
-
-
-
+driver.find_element('id', 'user-name').send_keys('standard_user')
+time.sleep(1)
+driver.find_element('id', 'password').send_keys('secret_sauce')
+time.sleep(1)
+driver.find_element('id', 'login-button').click()
+time.sleep(3)
+driver.find_element('id', 'react-burger-menu-btn').click()
+time.sleep(2)
+driver.find_element('id', 'logout_sidebar_link').click()
 
 
 
