@@ -23,25 +23,25 @@ time.sleep(2)
 
 ########################################################################################
 
-# ## Eg2
-#
-# from selenium import webdriver
-#
-# opts = webdriver.ChromeOptions()
-# opts.add_experimental_option("detach", True)
-#
-# driver = webdriver.Chrome(opts)
-#
-# driver.get('https://www.myntra.com/')
-# time.sleep(2)
-#
-# driver.find_element('link text', 'Women').click()
-# time.sleep(2)
-# driver.find_element('link text', 'Home').click()
-# time.sleep(2)
-# driver.find_element('link text', 'Genz').click()
-# time.sleep(2)
-# driver.find_element('link text', 'Studio').click()
+## Eg2
+
+from selenium import webdriver
+
+opts = webdriver.ChromeOptions()
+opts.add_experimental_option("detach", True)
+
+driver = webdriver.Chrome(opts)
+
+driver.get('https://www.myntra.com/')
+time.sleep(2)
+
+driver.find_element('link text', 'Women').click()
+time.sleep(2)
+driver.find_element('link text', 'Home').click()
+time.sleep(2)
+driver.find_element('link text', 'Genz').click()
+time.sleep(2)
+driver.find_element('link text', 'Studio').click()
 
 
 

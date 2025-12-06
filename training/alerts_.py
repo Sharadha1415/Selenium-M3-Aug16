@@ -179,8 +179,10 @@ import time
 #
 # ###########################################################################################################
 #
-# ## Push notifications
-#
+## Push notifications
+
+'''To avoid push notifications in Chrome'''
+
 # from selenium import webdriver
 #
 # opts = webdriver.ChromeOptions()
@@ -188,7 +190,31 @@ import time
 # opts.add_argument("--disable-notifications")
 #
 # driver = webdriver.Chrome(opts)
-# al = driver.switch_to.alert
+#
+# driver.get('https://www.irctc.co.in/nget/train-search')
+
+
+'''To avoid push notifications in Firefox'''
+# from selenium import webdriver
+#
+# opts = webdriver.FirefoxOptions()
+# opts.set_preference("dom.webnotifications.enabled", False)
+# opts.set_preference("dom.push.enabled", False)
+#
+# driver = webdriver.Firefox(opts)
+#
+# driver.get('https://www.irctc.co.in/nget/train-search')
+
+
+'''To avoid push notifications in Edge'''
+
+# from selenium import webdriver
+#
+# opts = webdriver.EdgeOptions()
+# opts.add_experimental_option("detach", True)
+# opts.add_argument("--disable-notifications")
+#
+# driver = webdriver.Edge(opts)
 #
 # driver.get('https://www.irctc.co.in/nget/train-search')
 

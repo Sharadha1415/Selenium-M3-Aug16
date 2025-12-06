@@ -5,37 +5,37 @@ To install openpyxl
     Go to command prompt    --> pip install openpyxl
 '''
 
-# from openpyxl import Workbook
-#
-# ## create the excel workbook
-# workbook = Workbook()
-#
-# ## Initialize worksheet
-# worksheet = workbook.active
-#
-# ## setup the sheetname(optional)
-# worksheet.title = 'candidates_info'
-#
-# ## Enter the data
-# worksheet['A1'] = 'name'
-# worksheet['B1'] = 'place'
-# worksheet['C1'] = 'email_id'
-# worksheet['D1'] = 'phone_num'
-#
-# data_list = [
-#     ['Shailaja', 'Bengaluru', 'shailaja@gmail.com', '9080706050'],
-#     ['Deeksha', 'Chennai', 'deeksha@gmail.com', '9181716151'],
-#     ['Hashmath', 'Hyderabad', 'hashmath@gmail.com', '9282726252'],
-#     ['Atharva', 'Pune', 'atharva@gmail.com', '9876987655']
-# ]
-# for data in data_list:
-#     worksheet.append(data)
-#
-# # ## save the excel file
-# # workbook.save('M3_candidates_data.xlsx')
-#
-# ## To save the excel file in different location
-# workbook.save(r'C:\Users\Ramya\PycharmProjects\sel-M3-weekend-Aug16-2025\files_\M3_data.xlsx')
+from openpyxl import Workbook
+
+## create the excel workbook
+workbook = Workbook()
+
+## Initialize worksheet
+worksheet = workbook.active
+
+## setup the sheetname(optional)
+worksheet.title = 'candidates_info'
+
+## Enter the data
+worksheet['A1'] = 'name'
+worksheet['B1'] = 'place'
+worksheet['C1'] = 'email_id'
+worksheet['D1'] = 'phone_num'
+
+data_list = [
+    ['Shailaja', 'Bengaluru', 'shailaja@gmail.com', '9080706050'],
+    ['Deeksha', 'Chennai', 'deeksha@gmail.com', '9181716151'],
+    ['Hashmath', 'Hyderabad', 'hashmath@gmail.com', '9282726252'],
+    ['Atharva', 'Pune', 'atharva@gmail.com', '9876987655']
+]
+for data in data_list:
+    worksheet.append(data)
+
+# ## save the excel file
+# workbook.save('M3_candidates_data.xlsx')
+
+## To save the excel file in different location
+workbook.save(r'C:\Users\Ramya\PycharmProjects\sel-M3-weekend-Aug16-2025\files_\M3_data.xlsx')
 
 ####################################################################################
 
